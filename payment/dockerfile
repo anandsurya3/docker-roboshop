@@ -1,0 +1,14 @@
+FROM python:3
+WORKDIR /opt/app
+COPY payment.ini .
+COPY *.py .
+COPY requitements.txt .
+RUN pip3 install -r requirements.txt
+ENV CART_HOST="cart" \
+    CART_PORT="8080" \
+    USER_HOST="cart" \
+    USER_PORT="8080" \
+    AMQP_HOST="rabbitmq" \
+    AMQP_USER="roboshop" \
+    AMQP_PASS="surya0303"
+CMD ["uwsgi" , "--ini" , "payment.ini"]
