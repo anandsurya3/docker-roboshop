@@ -11,6 +11,7 @@ services:
     build: ./mongodb
     image: anandsurya/mongodb:v1
     container_name: mongodb
+     
      redis:
     image: redis:7.0
     container_name: redis
