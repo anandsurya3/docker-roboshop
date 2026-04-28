@@ -12,7 +12,7 @@ services:
     image: anandsurya/mongodb:v1
     container_name: mongodb
      
-     redis:
+  redis:
     image: redis:7.0
     container_name: redis
   mysql:
